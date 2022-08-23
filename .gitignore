@@ -1,0 +1,5 @@
+# Ignore all
+workdir/build/*
+
+# Unignore index.html
+!workdir/build/index.html
