@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  dart-playground:
+    build: 
+      context: ./
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    user: root
+    volumes:
+      - ./workdir:/home/workdir
