@@ -1,6 +1,7 @@
 FROM dart:latest
 
 COPY ./workdir /home/workdir
+VOLUME /home/workdir
 WORKDIR /home/workdir
 
 CMD mkdir -p /home/workdir/build && \
