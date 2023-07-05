@@ -4,5 +4,7 @@ COPY ./workdir /home/workdir
 VOLUME /home/workdir
 WORKDIR /home/workdir
 
-CMD export PATH="$PATH":"$HOME/.pub-cache/bin" && \
+CMD dart pub global activate webdev && \
+  export PATH="$PATH":"$HOME/.pub-cache/bin" && \
+  echo $PATH && \
   webdev build
