@@ -14,6 +14,8 @@ jobs:
       targetZip: dart-playground-${{ github.ref_name }}.zip
     steps:
       - uses: actions/checkout@v3
+      
+      - run: mkdir -pv workdir/build
 
       - name: Build the stack
         run: docker-compose up --build && docker-compose down
